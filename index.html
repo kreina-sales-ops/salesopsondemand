@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Operations on Demand | Kim Reina</title>
+    <style>
+        :root {
+            --beige: #F5F2ED;
+            --sand: #EBE6E0;
+            --accent: #8DABCE;
+            --text: #333333;
+        }
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--text); background: var(--beige); margin: 0; }
+        
+        .hero { position: relative; padding: 80px 20px; text-align: center; background: var(--sand); }
+        .hero::before {
+            content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20'%3E%3Cpath fill='none' stroke='%23dcd6cf' stroke-width='0.5' d='M0 15 Q 25 15 50 10 T 100 5'/%3E%3C/svg%3E");
+            opacity: 0.6;
+        }
+        .hero h1 { position: relative; font-weight: 300; letter-spacing: 2px; text-transform: uppercase; color: #444; margin-bottom: 10px; }
+        .hero p { position: relative; font-style: italic; color: #666; margin-top: 0; }
+        
+        .container { max-width: 900px; margin: auto; padding: 60px 20px; }
+        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        .card { background: white; padding: 30px; border-top: 5px solid var(--accent); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .card h3 { color: var(--accent); text-transform: uppercase; font-size: 0.9rem; }
+        .card ul { padding-left: 20px; font-size: 0.9rem; }
+
+        form { display: flex; flex-direction: column; max-width: 500px; margin: auto; }
+        input, textarea, button { padding: 12px; margin-bottom: 10px; border: 1px solid #ccc; background: white; font-family: inherit; }
+        button { background: var(--accent); color: white; border: none; cursor: pointer; text-transform: uppercase; }
+        
+        footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #666; }
+    </style>
+</head>
+<body>
+
+<header class="hero">
+    <h1>Sales Operations on Demand</h1>
+    <p>Fractional Sales Operations and Sales Enablement Services</p>
+</header>
+
+<div class="container">
+    <div class="grid">
+        <div class="card">
+            <h3>Sales Process</h3>
+            <ul>
+                <li>Sales Process Design and Documentation</li>
+                <li>Dashboards and Executive Reporting</li>
+                <li>Forecasting and Sales Performance Metrics</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>CRM Implementation</h3>
+            <ul>
+                <li>CRM Architecture, Custom Fields and Workflows</li>
+                <li>Lead, Pipeline and Opportunity Management</li>
+                <li>Data Migration, Cleanup, and Deduplication</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Proposals</h3>
+            <ul>
+                <li>Manage RFP Process</li>
+                <li>Proposal Writing</li>
+                <li>Proposal Design Templates</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Sales Enablement</h3>
+            <ul>
+                <li>CRM User Training and Adoption</li>
+                <li>Challenger Methodology Training</li>
+                <li>Custom Sales Training</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2 style="text-align: center; margin-top: 60px; color: var(--accent);">Let's Connect</h2>
+    <!-- Only this line changes: -->
+    <form name="contact" method="POST" data-netlify="true">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="text" name="company" placeholder="Company Name" required>
+        <textarea name="challenges" placeholder="Current Challenges (Optional)" rows="3"></textarea>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<footer>
+    <p>Kim Reina | kreina@salesopsondemand.com | 954-709-0012</p>
+</footer>
+
+</body>
+</html>
